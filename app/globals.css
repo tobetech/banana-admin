@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  background-color: #0B0F1A;
+  color: #F5F7FA;
+  font-family: 'Inter', 'Noto Sans Thai', sans-serif;
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: #232B40; border-radius: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+
+@layer components {
+  .input {
+    @apply w-full bg-panel2 border border-border rounded-lg px-3 py-2 text-white text-sm outline-none focus:border-accent;
+  }
+  .btn-primary {
+    @apply bg-accent hover:bg-accent-dark disabled:opacity-50 text-gray-900 font-semibold rounded-lg py-2.5 transition text-sm;
+  }
+}
