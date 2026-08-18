@@ -89,7 +89,7 @@ export default function AdminUsersClient({
                     </span>
                   </td>
                   <td className="px-5 py-3 text-muted text-xs">
-                    {a.last_login_at ? new Date(a.last_login_at).toLocaleString("th-TH") : "ยังไม่เคยล็อกอิน"}
+                    {a.last_login_at ? new Date(a.last_login_at).toLocaleString("th-TH", { timeZone: "Asia/Bangkok" }) : "ยังไม่เคยล็อกอิน"}
                   </td>
                   <td className="px-5 py-3 text-right space-x-2">
                     <button

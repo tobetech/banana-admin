@@ -109,7 +109,7 @@ export default async function LogsPage({
                 {logs.map((l) => (
                   <tr key={l.id} className="border-t border-border hover:bg-panel2/50">
                     <td className="px-5 py-3 text-muted text-xs whitespace-nowrap">
-                      {new Date(l.created_at).toLocaleString("th-TH")}
+                     {new Date(l.created_at).toLocaleString("th-TH", { timeZone: "Asia/Bangkok" })}
                     </td>
                     <td className="px-5 py-3 text-white">
                       {l.username === "kiosk" ? (

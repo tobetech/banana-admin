@@ -78,7 +78,7 @@ export default async function TransactionsPage({
                 {rows.map((r) => (
                   <tr key={r.id} className="border-t border-border hover:bg-panel2/50">
                     <td className="px-5 py-3 text-muted text-xs">
-                      {new Date(r.created_at).toLocaleString("th-TH")}
+                      {new Date(r.created_at).toLocaleString("th-TH", { timeZone: "Asia/Bangkok" })}
                     </td>
                     <td className="px-5 py-3 text-white">{r.member_name ?? "-"}</td>
                     <td className="px-5 py-3 text-gray-300">{r.machine_id ?? "-"}</td>
